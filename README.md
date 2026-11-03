@@ -88,9 +88,13 @@ make test    # QA with fontspector (needs `cargo binstall fontspector`)
 make proof   # HTML proofs with diffenator3
 ```
 
-The source is `sources/PentasMeongSeru.glyphs` (Glyphs 4). The build is
+The source is `sources/PentasMeongSeru.glyphs` (Glyphs 3/4). The build is
 configured in `sources/config.yaml`. `scripts/fix-ps-names.py` runs after the
-build so every output uses the `PentasMeongSeru` PostScript names.
+build: it gives every output the `PentasMeongSeru` PostScript names and applies
+two small metadata fixes (unique ID, WWS flag).
+
+`make test` checks the main family and the SC family separately, so the QA
+site has one report for each.
 
 To show proofs and QA reports on GitHub Pages, open **Settings → Pages** and set
 **Source** to **GitHub Actions**.
@@ -103,7 +107,7 @@ To show proofs and QA reports on GitHub Pages, open **Settings → Pages** and s
 
 ## License
 
-Copyright 2026 The Pentas Meong! Project Authors.
+Copyright 2026 The Pentas Meong! Project Authors (<https://github.com/kaleidosium/pentas-meong-seru>).
 Copyright 2020-2023 Reddit, Inc. (<https://github.com/reddit/redditsans>).
 
 This Font Software is licensed under the SIL Open Font License, Version 1.1.
