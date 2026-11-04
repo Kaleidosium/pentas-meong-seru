@@ -1,5 +1,4 @@
-Copyright 2026 The Pentas Meong! Project Authors (https://github.com/kaleidosium/pentas-meong-seru)
-Copyright 2020-2023 Reddit, Inc. (https://github.com/reddit/redditsans)
+Copyright 2026 The Pentas Meong Seru Project Authors (https://github.com/kaleidosium/pentas-meong-seru); Copyright 2020-2023 Reddit, Inc. (https://github.com/reddit/redditsans)
 
 This Font Software is licensed under the SIL Open Font License, Version 1.1.
 This license is copied below, and is also available with a FAQ at:

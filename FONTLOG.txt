@@ -1,27 +1,114 @@
-FONTLOG for Pentas Meong!
+FONTLOG for Pentas Meong Seru
 
-This file provides detailed information on the Pentas Meong! Font Software.
-This information should be distributed along with the Pentas Meong! fonts and
+This file provides detailed information on the Pentas Meong Seru Font Software.
+This information should be distributed along with the Pentas Meong Seru fonts and
 any derivative works.
 
 
 Basic Font Information
 
-Pentas Meong! is a quirky condensed sans for posters, websites and music and art
+Pentas Meong Seru is a quirky condensed sans for posters, websites and music and art
 headlines that still works in running text. It has eight weights (ExtraLight to
-Black) on a single weight axis, true small caps, a curved-arm K, and
-wedge-shaped commas and quotes. The classic forms are kept as stylistic sets.
+Black) on a single weight axis, true small caps, a K with an h-shaped leg, a 4
+with a full-height diagonal over a short stem, an epsilon-style ampersand, a
+raised eight-armed asterisk, slanted commas and wedge-shaped quotes. The
+classic forms are kept as stylistic sets.
+Its brand name is written "Pentas Meong!"; the family name spells the "!" out
+as "Seru" (the exclamation mark is "tanda seru" in Indonesian).
 
-Pentas Meong! was inspired by the text face of Lomba Sihir's album Obrolan Jam
+Pentas Meong Seru was inspired by the text face of Lomba Sihir's album Obrolan Jam
 3 Pagi: the typeface used for its lyrics and other text, alongside the album's
 fantail display lettering.
 
-Pentas Meong! is a modified version of Reddit Sans Condensed by Stephen
+Pentas Meong Seru is a modified version of Reddit Sans Condensed by Stephen
 Hutchings / Reddit, Inc. (https://github.com/reddit/redditsans), licensed under
 the SIL Open Font License 1.1. Reddit Sans declares no Reserved Font Name.
 
 
 ChangeLog
+
+4 Nov 2026 (The Pentas Meong Seru Project Authors) Pentas Meong Seru 1.001
+- Family renamed from "Pentas Meong!" to "Pentas Meong Seru" (and "Pentas Meong
+  Seru SC"), because family names can't contain "!". File and PostScript names
+  are unchanged (PentasMeongSeru). The specimens keep the "Pentas Meong!" brand.
+- Small caps for the micro sign, florin, liter sign and pi (smcp; the symbols
+  keep their shape, with small-cap spacing) and a small-cap Ohm sign (c2sc)
+- Ligature carets for the small-cap fi and fl
+- The ss01/cv03 d with caron no longer puts its caron over the next letter
+  around the Regular weight (a misplaced component inherited from Reddit Sans)
+- Static TTFs are hinted with Reddit Sans' ttfautohint settings again (12 to 32
+  ppem, x-height snapping exceptions at 12-14 ppem) plus the strong stem-width
+  mode
+- New meta table (Latin). The SC family no longer has an smcp feature, which
+  had no effect there.
+- The static SC OTFs now have their own CFF names. They had kept the main
+  family's (e.g. PentasMeongSeru-Bold), so apps that identify fonts by them
+  could mix up the two families.
+- New contextual alternates (calt, on by default; reddit/redditsans#18):
+  3x9 becomes 3 multiplied by 9, 12:34 gets a raised colon, -> <- <-> become
+  arrows, and brackets, dashes, @, slashes, middle dot and bullet switch to
+  their case forms next to capitals and figures
+- New raised colon (colon.case), also used by the case feature
+
+Design:
+- New K (capital and small cap): the leg curves down from the stem like an h,
+  with a straight arm to the top right. ss05 "Straight K" now changes only the
+  capital and small-cap K.
+- The lowercase k is straight again by default; the curved-arm k moved to
+  cv19 "Curly k"
+- New eight-armed asterisk with even strokes, centred on the cap height (the
+  low asterisk, two-asterisk and asterism glyphs keep their positions)
+- New ampersand: a domed top with a short hook, a V-notched waist, and a
+  crossbar that sticks out past the bowl, split by a narrow gap that opens the
+  lower counter, as on the Lomba Sihir poster (also the small-cap ampersand).
+  The top shoulder and the lower bowl no longer thin out at the light weights
+  (their inner corners now follow the outer curves). It is re-centred in its
+  width (more room on the left, less on the right) and kerns with following
+  capitals, diagonals, quotes and punctuation.
+- Four: a new 4. A straight, full-height diagonal with a flat top runs down
+  to a low crossbar, and the stem stops just above the middle, so the 4 is
+  open at the top right. The crossbar ends at the stem, and the 4 is as wide
+  as the other figures. It covers lining, old-style, tabular, small-cap,
+  superior, inferior and fraction figures and kerns like the classic 4 on its
+  diagonal side. The bent-arm open 4 moved to cv20 "Bent 4".
+- New 6 and 9 with straight diagonals, in lining, old-style, tabular,
+  small-cap, numerator and denominator styles. The previous 4, 6 and 9 are in
+  ss07 "Classic figures".
+- Quotes: stronger wedges, so opening and closing quotes differ at text sizes
+  (single, double and low-9 quotes, and the modifier apostrophes). The comma
+  keeps its parallelogram.
+- Math signs (+ - x / = != +- < > <= >= not and approx-equal) share one width;
+  the approx-equal sign is narrower to fit.
+- Kerning groups updated for the new K, 4 and ampersand; kerning pairs left
+  without glyphs were removed
+- Designer: Dania Rifki added next to Stephen Hutchings.
+
+New letters, with small caps: IJ ij, U and u with caron, long s, G and g with
+stroke, H and h with caron, K and k with caron, Ezh and ezh, Ezh and ezh with
+caron (the Dutch, French and German auxiliary letters and the Sami letters used
+in Finland).
+
+Fixes, most of them inherited from Reddit Sans:
+- ss05 "Straight K" also turned the lowercase k into the curly k. The curly k
+  is now only in cv19.
+- The f stem sat 2 units above the baseline at ExtraLight (f, fi, fl, ff...).
+- The numerator, superior, inferior and subscript 4 were 36 units too wide;
+  the inferior 1 at ExtraLight and two other composites had stale widths.
+- The slash of the ss01 o-slash sat 2 units high at Regular.
+- Nodes 1 or 2 units off the baseline, x-height or cap height in 19 glyphs,
+  including r, the old-style tabular 4, 5 and 7, arrows, summation, infinity,
+  empty set, currency, dong, plus and divide.
+- Overlapping contours merged in the small-cap x, 8, the old-style tabular 8,
+  infinity, the arrows and the single-storey a; X and x no longer have
+  coincident segments; the micro sign's descender no longer shares an edge
+  with the u. Infinity and the single-storey a had 2-unit slips at ExtraLight.
+- The l of the ss01 fl ligature reached 1 unit above the cap height.
+- Points added where a few curves cross the baseline or cap height (old-style
+  3, inferior 0, liter sign, ezh, classic comma, double breve), so the
+  TrueType conversion no longer leaves points 1 or 2 units off those lines.
+- The one-quarter and three-quarters fractions now store their real component
+  positions instead of relying on stale ones.
+- OFL.txt: both copyright notices on its first line, as in the fonts.
 
 3 Nov 2026 (The Pentas Meong! Project Authors) Pentas Meong! 1.000
 - New family name "Pentas Meong!". PostScript and file names use the slug

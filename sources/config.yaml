@@ -1,10 +1,10 @@
-# Build configuration for Pentas Meong! (gftools builder).
+# Build configuration for Pentas Meong Seru (gftools builder).
 # Docs: https://github.com/googlefonts/gftools/blob/main/Lib/gftools/builder/__init__.py
 
 sources:
   - PentasMeongSeru.glyphs
 
-familyName: "Pentas Meong!"
+familyName: "Pentas Meong Seru"
 
 # Build everything: variable TTF, static TTF, static OTF and WOFF2 webfonts.
 buildVariable: true

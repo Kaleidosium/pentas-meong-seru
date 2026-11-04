@@ -20,7 +20,7 @@ venv: venv/touchfile
 
 build.stamp: venv sources/config.yaml $(SOURCES)
 	rm -rf fonts
-	(for config in sources/config*.yaml; do . venv/bin/activate; gftools builder $$config; done) && . venv/bin/activate && python3 scripts/fix-ps-names.py fonts && touch build.stamp
+	(for config in sources/config*.yaml; do . venv/bin/activate; gftools builder $$config; done) && . venv/bin/activate && python3 scripts/rehint.py fonts && python3 scripts/postbuild.py fonts && touch build.stamp
 
 venv/touchfile: requirements.txt
 	test -d venv || python3 -m venv venv
