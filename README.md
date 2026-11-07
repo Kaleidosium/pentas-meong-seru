@@ -42,7 +42,8 @@ Stephen Hutchings / Reddit, Inc., released under the SIL Open Font License.
 
 The build also produces **Pentas Meong Seru SC**, a separate family in which the
 lowercase _is_ small caps by default. Use it in apps that can't switch OpenType
-features on.
+features on. It has no `smcp` or `c2sc` feature; for all-small-caps text, use
+the main family with both turned on.
 
 ![Weights](documentation/image3.png)
 
@@ -109,14 +110,16 @@ configured in `sources/config.yaml`. Two scripts run after the build:
   crisply on Windows. The variable font stays unhinted.
 - `scripts/postbuild.py` applies small metadata fixes to every output (unique
   ID, WWS flag, a `meta` table, CFF names that match the name table) and
-  removes the `smcp` feature from the SC family, where the lowercase is already
-  small caps.
+  removes the `smcp` and `c2sc` features from the SC family, where the
+  lowercase is already small caps.
 
 On Windows, install the static TTFs from `fonts/ttf/` for the sharpest text at
 small sizes (for example in code editors).
 
 `make test` checks the main family and the SC family separately, so the QA
-site has one report for each.
+site has one report for each. It skips
+`googlefonts/metadata/unreachable_subsetting`, which only concerns how the
+Google Fonts API splits fonts into subsets.
 
 To show proofs and QA reports on GitHub Pages, open **Settings → Pages** and set
 **Source** to **GitHub Actions**.

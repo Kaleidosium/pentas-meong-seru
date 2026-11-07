@@ -34,7 +34,8 @@ First release. Changes from Reddit Sans Condensed:
 
 Families and fonts:
 - Two families: "Pentas Meong Seru" and "Pentas Meong Seru SC", in which the
-  lowercase is small caps (for apps that can't switch OpenType features on).
+  lowercase is small caps (for apps that can't switch OpenType features on;
+  it has no smcp or c2sc).
   PostScript and file names use PentasMeongSeru.
 - Eight weights, ExtraLight to Black, as variable fonts and as static TTF, OTF
   and WOFF2 fonts.
@@ -127,14 +128,20 @@ Fixes to problems inherited from Reddit Sans:
 - Nodes 1 or 2 units off the baseline, x-height or cap height in 19 glyphs,
   including r, the old-style tabular 4, 5 and 7, arrows, summation, infinity,
   empty set, currency, dong, plus and divide.
-- Overlapping contours merged in the old-style tabular 8, infinity, the arrows
-  and the single-storey a; X and x no longer have coincident segments; the
+- Overlapping contours merged in the old-style tabular 8, infinity, the arrows,
+  pi and the single-storey a; X and x no longer have coincident segments; the
   micro sign's descender no longer shares an edge with the u. Infinity and the
   single-storey a had 2-unit slips at ExtraLight.
 - The l of the ss01 fl ligature reached 1 unit above the cap height.
 - Points added where a few curves cross the baseline or cap height (old-style
   3, inferior 0, liter sign, ezh, classic comma, double breve), so the
   TrueType conversion no longer leaves points 1 or 2 units off those lines.
+  The superior 3 and the dot of Ṧ no longer land 2 units off the cap height
+  and ascender.
+- Around the Medium and SemiBold weights, the zeros of % and ‰ and the acute
+  and grave accents were drawn 12-17% wider than the Regular and Black
+  masters allow (intermediate masters left over from the wider Reddit Sans),
+  so % reached past its advance width there.
 - The one-quarter and three-quarters fractions store their real component
   positions instead of relying on stale ones.
 - The zero-width space (U+200B) has zero width.

@@ -11,10 +11,12 @@
    table into the CFF table. gftools renames the SC family in the name table
    only, so the SC OTFs kept the main family's CFF names (PentasMeongSeru-Bold),
    and apps that identify fonts by them could confuse the two families.
-5. SC family: drops the smcp feature. gftools builds "Pentas Meong Seru SC" by
-   copying the smcp lookups into ccmp, so its lowercase is already small caps
-   and smcp has nothing left to do (QA tools then report every letter as "smcp
-   had no effect"). c2sc stays, for all-small-caps text.
+5. SC family: drops the smcp and c2sc features. gftools builds "Pentas Meong
+   Seru SC" by copying the smcp lookups into ccmp, so its lowercase is already
+   small caps and smcp can't change anything (fontspector's shape_languages
+   warns about that). Dropping smcp alone isn't enough: while c2sc is there,
+   missing_small_caps_glyphs expects smcp to cover every lowercase letter and
+   FAILs. Without both, all-small-caps text needs the main family's smcp+c2sc.
 
 Usage: python3 scripts/postbuild.py fonts/
 """
@@ -94,8 +96,10 @@ def fix_font(path):
             if value and getattr(top, key, None) != value:
                 setattr(top, key, value)
                 changed = True
-    if "SeruSC" in Path(path).name and drop_feature(font, "smcp"):
-        changed = True
+    if "SeruSC" in Path(path).name:
+        for tag in ("smcp", "c2sc"):
+            if drop_feature(font, tag):
+                changed = True
     if changed:
         font.save(path)
     return changed
