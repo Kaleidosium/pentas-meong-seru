@@ -17,6 +17,7 @@ font stays unhinted, as Google Fonts requires.
 
 Usage: python3 scripts/rehint.py fonts
 """
+
 import glob
 import os
 import sys
@@ -42,15 +43,19 @@ def main(fonts_dir):
         os.replace(tmp, path)
     webfonts = 0
     for woff2 in sorted(glob.glob(os.path.join(fonts_dir, "webfonts", "*.woff2"))):
-        ttf = os.path.join(fonts_dir, "ttf", os.path.basename(woff2)[: -len(".woff2")] + ".ttf")
+        ttf = os.path.join(
+            fonts_dir, "ttf", os.path.basename(woff2)[: -len(".woff2")] + ".ttf"
+        )
         if not os.path.exists(ttf):  # the variable webfont has no static counterpart
             continue
         font = TTFont(ttf)
         font.flavor = "woff2"
         font.save(woff2)
         webfonts += 1
-    print("Re-hinted %d static TTFs (ttfautohint %s) and rebuilt %d static WOFF2 files"
-          % (len(ttfs), " ".join(TTFA_ARGS), webfonts))
+    print(
+        "Re-hinted %d static TTFs (ttfautohint %s) and rebuilt %d static WOFF2 files"
+        % (len(ttfs), " ".join(TTFA_ARGS), webfonts)
+    )
 
 
 if __name__ == "__main__":

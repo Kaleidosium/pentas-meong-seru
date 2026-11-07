@@ -20,6 +20,7 @@
 
 Usage: python3 scripts/postbuild.py fonts/
 """
+
 import re
 import sys
 from pathlib import Path
@@ -54,7 +55,9 @@ def drop_feature(font, tag):
     if variations:
         for rec in variations.FeatureVariationRecord:
             subst = rec.FeatureTableSubstitution
-            subst.SubstitutionRecord = [s for s in subst.SubstitutionRecord if s.FeatureIndex in remap]
+            subst.SubstitutionRecord = [
+                s for s in subst.SubstitutionRecord if s.FeatureIndex in remap
+            ]
             for s in subst.SubstitutionRecord:
                 s.FeatureIndex = remap[s.FeatureIndex]
             subst.SubstitutionCount = len(subst.SubstitutionRecord)

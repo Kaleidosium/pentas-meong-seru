@@ -24,7 +24,9 @@ WEIGHTS = [
 SIZE, FIRST_BASELINE, LINE_HEIGHT = 96, 156, 148
 
 parser = argparse.ArgumentParser()
-parser.add_argument("--output", metavar="PNG", required=True, help="where to write the PNG file")
+parser.add_argument(
+    "--output", metavar="PNG", required=True, help="where to write the PNG file"
+)
 args = parser.parse_args()
 
 newPage(WIDTH, HEIGHT)
@@ -34,5 +36,8 @@ fill(*INK)
 for i, (name, wght) in enumerate(WEIGHTS):
     font(FONT, SIZE)
     fontVariations(wght=wght)
-    text(f"{name} Kucing kecil, kapal besar", (MARGIN, HEIGHT - FIRST_BASELINE - i * LINE_HEIGHT))
+    text(
+        f"{name} Kucing kecil, kapal besar",
+        (MARGIN, HEIGHT - FIRST_BASELINE - i * LINE_HEIGHT),
+    )
 saveImage(args.output)

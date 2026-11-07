@@ -73,7 +73,9 @@ Design:
   that sticks out past the bowl, split by a narrow gap that opens the lower
   counter, as on the Lomba Sihir poster (also the small-cap ampersand). In
   Black, thinner horizontals and a wider gap keep the counters open at text
-  sizes.
+  sizes. The classic Reddit Sans ampersand is in ss08 "Classic ampersand"
+  (also the small-cap ampersand); like the figures, it is narrower in the
+  heavier weights.
 - Asterisk: eight arms with even strokes, centred on the cap height, with
   heavier arms in Black. The low asterisk, two-asterisk and asterism glyphs
   keep their positions.
@@ -109,14 +111,15 @@ Features and kerning:
   dashes, @, slashes, middle dot and bullet switch to their case forms next
   to capitals and figures.
 - New stylistic sets and character variants: ss05 "Straight K", ss06 "Classic
-  punctuation", ss07 "Classic figures", cv19 "Curly k" and cv20 "Bent 4".
+  punctuation", ss07 "Classic figures", ss08 "Classic ampersand", cv19 "Curly
+  k" and cv20 "Bent 4".
 - Tabular figures don't kern.
 - į and ị lose their dot when a top accent is added (e.g. Lithuanian į́, ị̃),
   as i already did.
 - Kerning updated for the new shapes and spacing, with small-cap kerning. The
-  new comma and quotes, the straight quotes and the ss05, ss06 and ss07 forms
-  have their own kerning groups. Kerning pairs that referred to empty groups
-  or missing glyphs were removed.
+  new comma and quotes, the straight quotes and the ss05, ss06, ss07 and ss08
+  forms have their own kerning groups. Kerning pairs that referred to empty
+  groups or missing glyphs were removed.
 
 Fixes to problems inherited from Reddit Sans:
 - The ss01/cv03 d with caron put its caron over the next letter around the

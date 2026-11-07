@@ -26,19 +26,20 @@ Stephen Hutchings / Reddit, Inc., released under the SIL Open Font License.
 
 ![Small caps and alternates](documentation/image2.png)
 
-| Feature                                         | What it does                                                                                              |
-| ----------------------------------------------- | --------------------------------------------------------------------------------------------------------- |
-| `smcp`                                          | Lowercase → small caps (incl. all accented letters)                                                       |
-| `c2sc`                                          | Capitals → small caps; also small-cap figures and `& ! ? ¡ ¿`                                             |
-| `cpsp`                                          | Poster tracking for capitals and small caps (scales with weight: +16 to +40 units per side)               |
+| Feature                                         | What it does                                                                                                                                                                                                                          |
+| ----------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `smcp`                                          | Lowercase → small caps (incl. all accented letters)                                                                                                                                                                                   |
+| `c2sc`                                          | Capitals → small caps; also small-cap figures and `& ! ? ¡ ¿`                                                                                                                                                                         |
+| `cpsp`                                          | Poster tracking for capitals and small caps (scales with weight: +16 to +40 units per side)                                                                                                                                           |
 | `calt` (on by default)                          | Contextual alternates: `3x9` → `3×9` (hex such as `0x1F` is left alone), a raised colon in `12:34`, `->` `<-` `<->` → arrows (`x<-1` stays as typed), and brackets, dashes, `@`, `/`, `·` and `•` raised next to capitals and figures |
-| `ss05` "Straight K"                             | The classic straight-armed K (capital and small cap)                                                      |
-| `ss06` "Classic punctuation"                    | The classic round comma, semicolon and quotes                                                             |
-| `ss07` "Classic figures"                        | The classic 4, 6 and 9 (lining, old-style, tabular and small-cap figures)                                 |
-| `cv19` "Curly k"                                | A lowercase k with a curved arm                                                                           |
-| `cv20` "Bent 4"                                 | The open 4 with a bent arm (lining, old-style, tabular and small-cap figures)                             |
-| `ss01`–`ss04`, `cv01`–`cv18`                    | Alternates inherited from Reddit Sans (single-storey a, two-storey g, barred I, tall W, circular zero, …) |
-| `tnum`, `onum`, `frac`, `case`, `sups`/`subs` … | Figure styles and other features inherited from Reddit Sans                                               |
+| `ss05` "Straight K"                             | The classic straight-armed K (capital and small cap)                                                                                                                                                                                  |
+| `ss06` "Classic punctuation"                    | The classic round comma, semicolon and quotes                                                                                                                                                                                         |
+| `ss07` "Classic figures"                        | The classic 4, 6 and 9 (lining, old-style, tabular and small-cap figures)                                                                                                                                                             |
+| `ss08` "Classic ampersand"                      | The classic Reddit Sans ampersand (also the small-cap ampersand)                                                                                                                                                                      |
+| `cv19` "Curly k"                                | A lowercase k with a curved arm                                                                                                                                                                                                       |
+| `cv20` "Bent 4"                                 | The open 4 with a bent arm (lining, old-style, tabular and small-cap figures)                                                                                                                                                         |
+| `ss01`–`ss04`, `cv01`–`cv18`                    | Alternates inherited from Reddit Sans (single-storey a, two-storey g, barred I, tall W, circular zero, …)                                                                                                                             |
+| `tnum`, `onum`, `frac`, `case`, `sups`/`subs` … | Figure styles and other features inherited from Reddit Sans                                                                                                                                                                           |
 
 The build also produces **Pentas Meong Seru SC**, a separate family in which the
 lowercase _is_ small caps by default. Use it in apps that can't switch OpenType
@@ -68,7 +69,7 @@ the main family with both turned on.
   font-variant-caps: all-small-caps;
 } /* smcp + c2sc */
 .classic {
-  font-feature-settings: "ss05", "ss06", "ss07";
+  font-feature-settings: "ss05", "ss06", "ss07", "ss08";
 }
 ```
 

@@ -39,6 +39,6 @@ fill(*INK)
 line('KUCING, "KAPAL" & KOPI 4', 511, 110, 800, "cpsp")  # default forms
 fill(*GREY)
 line(
-    'KUCING, "KAPAL" & KOPI 4', 681, 110, 800, "ss05", "ss06", "ss07", "cpsp"
+    'KUCING, "KAPAL" & KOPI 4', 681, 110, 800, "ss05", "ss06", "ss07", "ss08", "cpsp"
 )  # classic forms
 saveImage(args.output)

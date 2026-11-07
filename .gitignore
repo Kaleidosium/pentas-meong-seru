@@ -1,4 +1,6 @@
 *~
+/fontspector
+/out
 venv
 venv-test
 build.stamp

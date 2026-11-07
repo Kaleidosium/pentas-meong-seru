@@ -20,7 +20,9 @@ LINES = [
 SIZE, FIRST_BASELINE, LINE_HEIGHT = 40, 104, 58
 
 parser = argparse.ArgumentParser()
-parser.add_argument("--output", metavar="PNG", required=True, help="where to write the PNG file")
+parser.add_argument(
+    "--output", metavar="PNG", required=True, help="where to write the PNG file"
+)
 args = parser.parse_args()
 
 newPage(WIDTH, HEIGHT)
