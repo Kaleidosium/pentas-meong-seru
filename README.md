@@ -2,9 +2,10 @@
 
 ![Pentas Meong!](documentation/image1.png)
 
-**Pentas Meong Seru** is a quirky condensed sans for posters, websites and music and art
-headlines that still holds up in running text. It pairs heavy, condensed capitals
-with true small caps and the quirks of its inspiration: a **K** with an h-shaped
+**Pentas Meong Seru** is a quirky sans for posters, websites and music and art
+headlines that still holds up in running text. Its capitals set near-circular
+rounds (**O**, **C**, **G**, **Q**) beside narrow straight-sided letters, and it
+has true small caps and the quirks of its inspiration: a **K** with an h-shaped
 leg, a **4** with a full-height diagonal over a short stem, an epsilon-style
 **&**, a raised eight-armed asterisk, slanted commas and wedge-shaped quotes.
 The family has eight weights from ExtraLight to Black, as a variable font and
@@ -30,7 +31,7 @@ Stephen Hutchings / Reddit, Inc., released under the SIL Open Font License.
 | `smcp`                                          | Lowercase → small caps (incl. all accented letters)                                                       |
 | `c2sc`                                          | Capitals → small caps; also small-cap figures and `& ! ? ¡ ¿`                                             |
 | `cpsp`                                          | Poster tracking for capitals and small caps (scales with weight: +16 to +40 units per side)               |
-| `calt` (on by default)                          | Contextual alternates: `3x9` → `3×9`, a raised colon in `12:34`, `->` `<-` `<->` → arrows, and brackets, dashes, `@`, `/`, `·` and `•` raised next to capitals and figures |
+| `calt` (on by default)                          | Contextual alternates: `3x9` → `3×9` (hex such as `0x1F` is left alone), a raised colon in `12:34`, `->` `<-` `<->` → arrows (`x<-1` stays as typed), and brackets, dashes, `@`, `/`, `·` and `•` raised next to capitals and figures |
 | `ss05` "Straight K"                             | The classic straight-armed K (capital and small cap)                                                      |
 | `ss06` "Classic punctuation"                    | The classic round comma, semicolon and quotes                                                             |
 | `ss07` "Classic figures"                        | The classic 4, 6 and 9 (lining, old-style, tabular and small-cap figures)                                 |
@@ -96,6 +97,7 @@ To build locally (Python 3.10+):
 make build   # creates a venv, runs gftools builder, writes fonts/
 make test    # QA with fontspector (needs `cargo binstall fontspector`)
 make proof   # HTML proofs with diffenator3
+make images  # README images (documentation/image*.py → image*.png)
 ```
 
 The source is `sources/PentasMeongSeru.glyphs` (Glyphs 3/4). The build is

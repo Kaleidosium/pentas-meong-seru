@@ -5,7 +5,7 @@
 # Names should be added to this file as:
 # Name or Organization <email address>
 
-# Pentas Meong Seru (2026). Add your name here:
+# Pentas Meong Seru (2026).
 Dania Rifki <atomicnumberphi@gmail.com>
 
 # Original design: Reddit Sans / Reddit Sans Condensed

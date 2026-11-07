@@ -2,7 +2,7 @@
 """Post-build fixes for every built font (run by `make build` after rehint.py).
 
 1. Unique ID (name ID 3): removes the empty vendor field that gftools leaves,
-   which otherwise shows as a run of spaces ("1.002;    ;PentasMeongSeru-Regular").
+   which otherwise shows as a run of spaces ("1.000;    ;PentasMeongSeru-Regular").
 2. OS/2 fsSelection: sets the WWS bit. Each family only varies in weight, so
    its names are WWS-conformant.
 3. meta table: declares that the fonts are designed for, and support, Latin
