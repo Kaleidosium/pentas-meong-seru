@@ -1,0 +1,20 @@
+# Build configuration for Pentas Meong Seru (gftools builder).
+# Docs: https://github.com/googlefonts/gftools/blob/main/Lib/gftools/builder/__init__.py
+
+sources:
+  - PentasMeongSeru.glyphs
+
+familyName: "Pentas Meong Seru"
+
+# Build everything: variable TTF, static TTF, static OTF and WOFF2 webfonts.
+buildVariable: true
+buildStatic: true
+buildTTF: true
+buildOTF: true
+buildWebfont: true
+
+# The Glyphs source keeps overlapping contours (e.g. the curved-arm K);
+# remove them in the static fonts.
+removeOutlineOverlaps: true
+
+# A STAT table is generated automatically from the Google Fonts axis registry.
