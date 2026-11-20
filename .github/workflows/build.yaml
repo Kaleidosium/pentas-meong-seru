@@ -130,6 +130,8 @@ jobs:
         continue-on-error: true
       - name: Copy OFL.txt to release directory
         run: cp OFL.txt "$ZIP_NAME/OFL.txt"
+      - name: Copy FONTLOG.txt to release directory
+        run: cp FONTLOG.txt "$ZIP_NAME/FONTLOG.txt"
       - name: Remove proof/test outputs from release
         run: rm -rf "$ZIP_NAME/out"
       - name: Set release file name

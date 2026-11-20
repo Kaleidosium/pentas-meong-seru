@@ -4,6 +4,7 @@
 venv
 venv-test
 build.stamp
+__pycache__
 proof
 node_modules
 package-lock.json
@@ -40,3 +41,8 @@ Thumbs.db
 *(Otomatik Kaydedildi).*
 *（自动存储）.*
 *（已自動儲存）.*
+
+# Agents
+skills-lock.json
+.agents
+.claude

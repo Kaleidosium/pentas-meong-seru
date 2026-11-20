@@ -7,149 +7,156 @@ any derivative works.
 
 Basic Font Information
 
-Pentas Meong Seru is a quirky sans for posters, websites and music and art
-headlines that still works in running text. Its capitals set near-circular
-rounds beside narrow straight-sided letters. It has eight weights (ExtraLight to
-Black) on a single weight axis, true small caps, a K with an h-shaped leg, a 4
-with a full-height diagonal over a short stem, an epsilon-style ampersand, a
-raised eight-armed asterisk, slanted commas and wedge-shaped quotes. The
-classic forms are kept as stylistic sets.
-Its brand name is written "Pentas Meong!"; the family name spells the "!" out
-as "Seru" (the exclamation mark is "tanda seru" in Indonesian).
+Pentas Meong Seru is a quirky sans serif for gig posters, websites, and music
+and art headlines. It also works in running text. Its capitals put
+near-circular rounds beside narrow, straight-sided letters. It has eight
+weights, from ExtraLight to Black, on one weight axis, and true small caps.
+Other traits set it apart: a K whose leg curves like an h, a 4 with a
+full-height diagonal over a short stem, an epsilon-style ampersand, a raised
+eight-armed asterisk, slanted commas, square-headed quotes and a flat-topped
+question mark. Stylistic sets keep the classic forms.
 
-Pentas Meong Seru was inspired by the text face of Lomba Sihir's album Obrolan Jam
-3 Pagi: the typeface used for its lyrics and other text, alongside the album's
-fantail display lettering.
+The brand name is written "Pentas Meong!". Font family names can't contain
+punctuation, so the family name spells the "!" out as "Seru", from "tanda
+seru", the Indonesian name for the exclamation mark.
+
+The inspiration for Pentas Meong Seru is the text face of Lomba Sihir's album
+Obrolan Jam 3 Pagi. That is the typeface used for the album's lyrics and
+other text, next to its fantail display lettering. The traits listed above
+are Pentas Meong Seru's own take on ideas from that face. Pentas Meong Seru
+isn't meant as a one-to-one recreation of the Lomba Sihir font. The starting
+point for its outlines is Reddit Sans Condensed.
 
 Pentas Meong Seru is a modified version of Reddit Sans Condensed by Stephen
-Hutchings / Reddit, Inc. (https://github.com/reddit/redditsans), licensed under
-the SIL Open Font License 1.1. Reddit Sans declares no Reserved Font Name.
+Hutchings for Reddit, Inc. (https://github.com/reddit/redditsans), licensed
+under the SIL Open Font License 1.1. Reddit Sans Condensed declares no
+Reserved Font Name.
 
 
 ChangeLog
 
-7 Nov 2026 (The Pentas Meong Seru Project Authors) Pentas Meong Seru 1.000
+21 Nov 2026 (The Pentas Meong Seru Project Authors) Pentas Meong Seru 1.000
 
-First release. Changes from Reddit Sans Condensed:
+First release. These are the changes from Reddit Sans Condensed.
 
-Families and fonts:
-- Two families: "Pentas Meong Seru" and "Pentas Meong Seru SC", in which the
-  lowercase is small caps (for apps that can't switch OpenType features on;
-  it has no smcp or c2sc).
-  PostScript and file names use PentasMeongSeru.
-- Eight weights, ExtraLight to Black, as variable fonts and as static TTF, OTF
-  and WOFF2 fonts.
-- The static TTFs are hinted with Reddit Sans' ttfautohint settings (12 to 32
-  ppem, x-height snapping exceptions at 12-14 ppem) plus the strong stem-width
-  mode. The variable fonts are unhinted.
-- A meta table declares Latin.
-- Designer: Dania Rifki added next to Stephen Hutchings.
+Families and fonts
+- Two families, Pentas Meong Seru and Pentas Meong Seru SC. The SC family
+  encodes small caps directly at the lowercase code points, so it works in
+  apps that can't turn OpenType features on. It has no smcp or c2sc feature.
+- Eight weights from ExtraLight to Black, as variable fonts and as static TTF
+  and OTF fonts. The main family also comes as variable and static WOFF2
+  fonts. PostScript names and file names use PentasMeongSeru.
+- The static TTFs keep Reddit Sans Condensed's ttfautohint settings, 12 to 32
+  pixels per em, and add the strong stem-width mode. Alternates and small
+  caps share the alignment zones of the letters around them. ExtraBold and
+  Black round the x-height up at 14 pixels per em, which keeps the dots of
+  i, j and ! clear of the stem. The dot of the question marks stays clear of
+  the stem except in the ExtraBold and Black small caps at 12 and 13 pixels
+  per em. The static OTFs are hinted with otfautohint, and the variable fonts
+  are unhinted.
+- The underline matches the underscore and the strikeout matches the hyphen,
+  at every weight.
+- The ExtraLight OTFs use weight class 275, because older Windows apps
+  embolden CFF fonts lighter than 250. A meta table declares Latin.
+- Dania Rifki is credited as designer next to Stephen Hutchings.
 
-Design:
-- In the heavier weights the capitals, lowercase and figures are narrower, with
-  the stem weights kept. The capitals are re-spaced, with extra room around
-  round and diagonal letters; the lowercase keeps its spacing.
-- Round letters are close to circles. The capital O, C, Q, Schwa and OE (with
-  all their accented forms) are much wider, D is a little wider, and G is about
-  as wide as C. The lowercase and small-cap rounds (o c e g, b d p q thorn,
-  ae oe, eth, the single-storey a and the ss01 forms) are widened less, and
-  a u n h m r s are widened by the same amount as o so they stay even with it.
-  The figures are not widened, and 0 stays narrow.
-- Bars and slashes (H with stroke, O with stroke, the slashed zero) and accent
-  positions follow the new widths, in the intermediate masters too.
-- The ink traps on N, M, W, v, w and y are kept from Reddit Sans.
-- K (capital and small cap): the leg curves down from the stem like an h, with
-  a straight arm to the top right. The straight K is in ss05 "Straight K". The
-  lowercase k stays straight; a k with a curved arm is in cv19 "Curly k".
-- 4: a straight, full-height diagonal with a flat top runs down to a low
-  crossbar that ends at the stem, and the stem stops just above the middle, so
-  the 4 is open at the top right. It is a little narrower than the other
-  figures. This covers lining, old-style, tabular, small-cap, superior,
-  inferior and fraction figures. The bent-arm open 4 is in cv20 "Bent 4".
-- 6 and 9 with straight diagonals, in lining, old-style, tabular, small-cap,
-  numerator and denominator styles. The classic 4, 6 and 9 are in ss07
-  "Classic figures".
-- Ampersand: a domed top with a short hook, a V-notched waist, and a crossbar
-  that sticks out past the bowl, split by a narrow gap that opens the lower
-  counter, as on the Lomba Sihir poster (also the small-cap ampersand). In
-  Black, thinner horizontals and a wider gap keep the counters open at text
-  sizes. The classic Reddit Sans ampersand is in ss08 "Classic ampersand"
-  (also the small-cap ampersand); like the figures, it is narrower in the
-  heavier weights.
-- Asterisk: eight arms with even strokes, centred on the cap height, with
-  heavier arms in Black. The low asterisk, two-asterisk and asterism glyphs
-  keep their positions.
-- Punctuation: a slanted comma and wedge-shaped quotes, so opening and closing
-  quotes differ at text sizes (also the semicolon, the single, double and
-  low-9 quotes and the modifier apostrophes). In ExtraLight they are thinner,
-  to match the text. The classic round forms are in ss06 "Classic
-  punctuation".
-- Math signs (+ - x / = != +- < > <= >= not and approx-equal) share one width;
-  the approx-equal sign is narrower to fit.
-- A raised colon (colon.case), used by the case and calt features.
+Design
+- The heavier weights are narrower, with the stem weights kept. The capitals
+  are re-spaced, with extra room around round and diagonal letters. The
+  lowercase keeps its spacing.
+- Round letters are close to circles. The capital O, C, Q, Schwa and OE are
+  much wider, D is a little wider, and G is about as wide as C. The lowercase
+  and small-cap rounds are widened less, and a u n h m r s widen with the o.
+  The figures keep their widths.
+- The leg of the K curves down from the stem like an h, in capitals and small
+  caps. The straight K is in ss05 "Straight K". A lowercase k with a curved
+  arm is in cv19 "Curly k".
+- The 4 has a straight, full-height diagonal over a low crossbar and a short
+  stem, which leaves it open at the top right. The 6 and 9 have straight
+  diagonals. These shapes cover every figure style. The classic 4, 6 and 9
+  are in ss07 "Classic figures", and the bent-arm open 4 is in cv20 "Bent 4".
+- The ampersand has a domed top, a V-notched waist and a split crossbar,
+  inspired by the one on the Lomba Sihir poster. The classic ampersand is in
+  ss08 "Classic ampersand".
+- The asterisk has eight even arms and is centred on the cap height.
+- The comma is slanted. The quotes have square heads and a tail at the
+  comma's slant. The question mark has a flat top and a round bowl that opens
+  to the left. The interrobang has a slanted gap at the top, which keeps it
+  from reading as a P. The classic round punctuation is in ss06 "Classic
+  punctuation", and a wider question mark is in ss09 "Wide question mark".
+- The math signs share one width.
+- The case feature raises the colon, the semicolon, the inverted question and
+  exclamation marks and the less common dashes.
 
-Small caps and new characters:
-- Small caps (smcp and c2sc): a-z with all their accented forms, æ œ þ ə ß ð
-  ħ ĸ ł ŋ ø ŧ, the fi and fl ligatures (with ligature carets), the digraphs
-  Ǆ ǅ ǆ Ǉ ǈ ǉ Ǌ ǋ ǌ, figures and & ! ? ¡ ¿. The micro sign, florin, liter
-  sign and pi keep their shape with small-cap spacing, and the Ohm sign has a
-  small cap (c2sc).
-- New letters, with small caps: IJ ij, U and u with caron, long s, G and g
-  with stroke, H and h with caron, K and k with caron, Ezh and ezh, Ezh and
-  ezh with caron (the Dutch, French and German auxiliary letters and the Sami
-  letters used in Finland).
-- Ǵ (U+01F4), the capital of ǵ, which Reddit Sans lacked.
-- The line and paragraph separators (U+2028, U+2029).
+Small caps and new characters
+- Small caps (smcp and c2sc) cover a to z with every accented form, the other
+  Latin letters, the f ligatures, the DZ, LJ and NJ digraphs, the figures and
+  & ! ? ¡ ¿. Omega, Delta and Pi and the ss03 barred I and tall W have small
+  caps too.
+- New letters, all with small caps: IJ and ij, long s, G and g with stroke,
+  H, K, U and Ezh with caron, Ezh, Ǵ, O with dot above, O with caron, the U
+  with dieresis forms that complete Hanyu Pinyin, D with cedilla for
+  Livonian, the dotted consonants of older Irish spelling, Kurdish Ḧ and Ẍ,
+  F with hook, Latin alpha and n with long right leg.
+- Greek capital Mu, Pi, Delta and Omega and small delta and omega, so a case
+  change of µ, π, Δ and Ω stays in the font.
+- The line and paragraph separators and the narrow no-break space.
 
-Features and kerning:
-- cpsp (capital spacing): poster tracking for capitals and small caps that
-  scales with the weight.
-- Contextual alternates (calt, on by default; reddit/redditsans#18): 3x9
-  becomes 3 multiplied by 9 (also 10x10 and 1920x1080, and with small caps),
-  while hexadecimal numbers such as 0x1F keep their x; 12:34 gets a raised
-  colon; -> <- <-> become arrows, while x<-1 stays as typed; and brackets,
-  dashes, @, slashes, middle dot and bullet switch to their case forms next
-  to capitals and figures.
-- New stylistic sets and character variants: ss05 "Straight K", ss06 "Classic
-  punctuation", ss07 "Classic figures", ss08 "Classic ampersand", cv19 "Curly
-  k" and cv20 "Bent 4".
+Features and kerning
+- cpsp adds poster tracking to capitals, small caps and lining figures, and
+  the tracking grows with the weight.
+- calt (reddit/redditsans#18) turns 3x9 into 3×9 and -> <- <-> into arrows. It
+  raises the colon in 12:34, raises dashes, @, slashes, the middle dot and the
+  bullet next to capitals and figures, and raises brackets as a pair around
+  capitals and figures. Hexadecimal numbers such as 0x1F keep their x, and
+  brackets around mixed-case text stay low.
+- New stylistic sets and character variants: ss05 to ss09, cv19 and cv20. All
+  stylistic sets and character variants have descriptive names. The circular
+  zero (ss04, cv18) also works with old-style figures.
+- The default r/ ligature is removed, because it tightened every r before a
+  slash in ordinary text.
 - Tabular figures don't kern.
-- į and ị lose their dot when a top accent is added (e.g. Lithuanian į́, ị̃),
-  as i already did.
-- Kerning updated for the new shapes and spacing, with small-cap kerning. The
-  new comma and quotes, the straight quotes and the ss05, ss06, ss07 and ss08
-  forms have their own kerning groups. Kerning pairs that referred to empty
-  groups or missing glyphs were removed.
+- The kerning is redone for the new shapes and spacing, and small caps have
+  their own kerning. Accents, horns and ogoneks keep clear of the letters and
+  punctuation next to them at every weight.
 
-Fixes to problems inherited from Reddit Sans:
-- The ss01/cv03 d with caron put its caron over the next letter around the
-  Regular weight (a misplaced component), and the ss01 u with double acute
-  had a narrower advance than its u at Regular.
-- The f stem sat 2 units above the baseline at ExtraLight (f, fi, fl, ff...).
-- The inferior 1 at ExtraLight and two other composites had stale widths.
-- The slash of the ss01 o-slash sat 2 units high at Regular.
-- Nodes 1 or 2 units off the baseline, x-height or cap height in 19 glyphs,
-  including r, the old-style tabular 4, 5 and 7, arrows, summation, infinity,
-  empty set, currency, dong, plus and divide.
-- Overlapping contours merged in the old-style tabular 8, infinity, the arrows,
-  pi and the single-storey a; X and x no longer have coincident segments; the
-  micro sign's descender no longer shares an edge with the u. Infinity and the
-  single-storey a had 2-unit slips at ExtraLight.
-- The l of the ss01 fl ligature reached 1 unit above the cap height.
-- Points added where a few curves cross the baseline or cap height (old-style
-  3, inferior 0, liter sign, ezh, classic comma, double breve), so the
-  TrueType conversion no longer leaves points 1 or 2 units off those lines.
-  The superior 3 and the dot of Ṧ no longer land 2 units off the cap height
-  and ascender.
-- Around the Medium and SemiBold weights, the zeros of % and ‰ and the acute
-  and grave accents were drawn 12-17% wider than the Regular and Black
-  masters allow (intermediate masters left over from the wider Reddit Sans),
-  so % reached past its advance width there.
-- The one-quarter and three-quarters fractions store their real component
-  positions instead of relying on stale ones.
-- The zero-width space (U+200B) has zero width.
-- Five unused glyphs (NULL and orphaned alternates and marks) are no longer
-  exported.
-- The cv12 name is spelled "Single-storey a".
+Fixes to problems inherited from Reddit Sans Condensed
+- Points that sat 1 or 2 units off the baseline, x-height or cap height,
+  overlapping contours, stale component positions and widths, and kinks in
+  the 2 are fixed.
+- The figure dash, horizontal bar, math angle brackets, pi and tabular 0, 2
+  and 7 now match the weight, height or width of the glyphs around them. The
+  hairline cracks in the won sign and the interrobang are closed.
+- Combining marks stack centred above other marks. The combining cedilla and
+  ogonek attach to every letter that stands on the baseline. Accents on small
+  caps and capitals are centred at every weight, and the f ligatures have an
+  anchor for each letter.
+- Pairs that collided or sat loose are kerned. Among them are the accented o
+  and e, Ư, ľ, the accented small-cap and cursive i after capitals, ≤ ≥ < >
+  next to accents, the stars, and slashes after ogoneks.
+- The ffi and ffl ligatures follow ss01 and ss02 like fi and fl. dlig only
+  forms the small-cap fi and fl. ﬀ ﬃ ﬄ are encoded.
+- In Black, the small-cap 0 has an open counter, and ! ? ¡ ¿ ‽ ⁂ ≤ ≥ and ₫
+  have wider gaps. The dieresis sits a little higher in ExtraBold and Black.
+- The zero-width space has zero width, the hair space is a third of the thin
+  space, and the carriage return is as wide as the space.
+- Eight unused glyphs are no longer exported.
 
-Reddit Sans ChangeLog: see https://github.com/reddit/redditsans/blob/main/FONTLOG.txt
+Reddit Sans ChangeLog: see
+https://github.com/reddit/redditsans/blob/main/FONTLOG.txt
+
+
+Acknowledgements
+
+If you make modifications, add your name (N), email (E), web address (W) and
+a description (D). The list is in alphabetical order.
+
+N: Stephen Hutchings
+E: stephen@s-ings.com
+W: https://github.com/reddit/redditsans
+D: Designer of Reddit Sans and Reddit Sans Condensed, for Reddit, Inc.
+
+N: Dania Rifki
+E: atomicnumberphi@gmail.com
+W: https://github.com/kaleidosium/pentas-meong-seru
+D: Designer of Pentas Meong Seru

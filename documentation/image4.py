@@ -1,4 +1,5 @@
-# README image 4: running text.
+# README image 4: running text, with the default contextual alternates
+# (raised colons, ×, →).
 #
 # Run from the root of the repository after building the fonts:
 #   python3 documentation/image4.py --output documentation/image4.png
@@ -12,10 +13,10 @@ WIDTH, HEIGHT, MARGIN = 1600, 346, 80
 PAPER = (250 / 255, 248 / 255, 240 / 255)
 INK = (25 / 255, 25 / 255, 25 / 255)
 LINES = [
-    "Pentas Meong! is a quirky sans for posters and the web.",
-    "It pairs heavy, loosely tracked capitals with real small caps, a",
-    "K with an h-shaped leg, slanted punctuation, and still reads well",
-    "in running text. “Kok bisa?” Tickets: Fri 14.30–22.00, 75k.",
+    "Pentas Meong! started on gig posters, but it is just as happy setting the",
+    "small print underneath: line-ups, set times and ticket prices. Doors open",
+    "18:30, the band plays 19:30–22:00 (VIP area: 3x4 m, upstairs -> left).",
+    "Tickets 75k at the door. “Kok bisa semurah itu?”",
 ]
 SIZE, FIRST_BASELINE, LINE_HEIGHT = 40, 104, 58
 

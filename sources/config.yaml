@@ -17,4 +17,8 @@ buildWebfont: true
 # remove them in the static fonts.
 removeOutlineOverlaps: true
 
+# Hint the static OTFs too (otfautohint, from the afdko package). Without stem
+# hints their alignment zones do nothing and small text is soft on Windows.
+autohintOTF: true
+
 # A STAT table is generated automatically from the Google Fonts axis registry.

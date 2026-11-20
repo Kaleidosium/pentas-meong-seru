@@ -8,7 +8,9 @@ import argparse
 from drawbot_skia.drawbot import *
 
 FONT = "fonts/variable/PentasMeongSeru[wght].ttf"
-WIDTH, HEIGHT, MARGIN = 1600, 780, 80
+WIDTH, HEIGHT, MARGIN = 1600, 820, 80
+# Each line has a small label above it naming the features it uses.
+LABEL_SIZE, LABEL_RISE = 24, 98
 CREAM = (250 / 255, 246 / 255, 224 / 255)
 RED = (170 / 255, 48 / 255, 44 / 255)
 INK = (25 / 255, 25 / 255, 25 / 255)
@@ -23,6 +25,15 @@ def line(txt, baseline, size, wght, *features):
     text(txt, (MARGIN, HEIGHT - baseline))
 
 
+def label(txt, baseline):
+    """Labels the line whose baseline is `baseline` px from the top."""
+    fill(*GREY)
+    font(FONT, LABEL_SIZE)
+    fontVariations(wght=500)
+    openTypeFeatures(resetFeatures=True)
+    text(txt, (MARGIN, HEIGHT - baseline + LABEL_RISE))
+
+
 parser = argparse.ArgumentParser()
 parser.add_argument(
     "--output", metavar="PNG", required=True, help="where to write the PNG file"
@@ -32,13 +43,16 @@ args = parser.parse_args()
 newPage(WIDTH, HEIGHT)
 fill(*CREAM)
 rect(0, 0, WIDTH, HEIGHT)
+label("smcp", 211)
 fill(*RED)
-line("Pentas Meong! Live 2026", 171, 110, 800, "smcp", "cpsp")  # small caps
-line("ROCK & ROLL! KUCING 7.30 PM", 341, 110, 600, "c2sc", "cpsp")  # all small caps
+line("Pentas Meong! Live 2026", 211, 110, 800, "smcp", "cpsp")
+label("c2sc", 381)
+fill(*RED)
+line("ROCK & ROLL! KUCING 19.30 WIB", 381, 110, 800, "c2sc", "cpsp")
+label("default", 551)
 fill(*INK)
-line('KUCING, "KAPAL" & KOPI 4', 511, 110, 800, "cpsp")  # default forms
+line("KUCING, “KAPAL?” & 469", 551, 110, 800, "cpsp")
+label("ss05 ss06 ss07 ss08", 721)
 fill(*GREY)
-line(
-    'KUCING, "KAPAL" & KOPI 4', 681, 110, 800, "ss05", "ss06", "ss07", "ss08", "cpsp"
-)  # classic forms
+line("KUCING, “KAPAL?” & 469", 721, 110, 800, "ss05", "ss06", "ss07", "ss08", "cpsp")
 saveImage(args.output)

@@ -21,7 +21,7 @@ WEIGHTS = [
     ("ExtraBold", 800),
     ("Black", 900),
 ]
-SIZE, FIRST_BASELINE, LINE_HEIGHT = 96, 156, 148
+SIZE, FIRST_BASELINE, LINE_HEIGHT = 94, 156, 148
 
 parser = argparse.ArgumentParser()
 parser.add_argument(

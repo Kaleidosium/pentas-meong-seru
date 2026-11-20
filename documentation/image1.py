@@ -9,16 +9,18 @@ from drawbot_skia.drawbot import *
 
 FONT = "fonts/variable/PentasMeongSeru[wght].ttf"
 WIDTH, HEIGHT, MARGIN = 1600, 953, 80
+# The headline starts further left so its ink lines up with the subtitle's.
+HEADLINE_X = 64
 RED = (170 / 255, 48 / 255, 44 / 255)
 CREAM = (250 / 255, 246 / 255, 224 / 255)
 
 
-def line(txt, baseline, size, wght, *features):
+def line(txt, baseline, size, wght, *features, x=MARGIN):
     """Draws one line of text with its baseline `baseline` px from the top."""
     font(FONT, size)
     fontVariations(wght=wght)
     openTypeFeatures(resetFeatures=True, **{tag: True for tag in features})
-    text(txt, (MARGIN, HEIGHT - baseline))
+    text(txt, (x, HEIGHT - baseline))
 
 
 parser = argparse.ArgumentParser()
@@ -31,7 +33,7 @@ newPage(WIDTH, HEIGHT)
 fill(*RED)
 rect(0, 0, WIDTH, HEIGHT)
 fill(*CREAM)
-line("PENTAS", 320, 300, 900, "smcp")
-line("MEONG!", 620, 300, 900, "smcp")
-line("MUSIK, SENI & KUCING: LIVE 2026", 861, 97, 760, "cpsp")
+line("PENTAS", 320, 300, 900, "cpsp", x=HEADLINE_X)
+line("MEONG!", 620, 300, 900, "cpsp", x=HEADLINE_X)
+line("MUSIK, SENI & KUCING: LIVE 2026", 861, 95, 760, "cpsp")
 saveImage(args.output)
